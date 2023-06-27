@@ -3,19 +3,16 @@ import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { GrRefresh } from "react-icons/gr";
 import { SiGmail } from "react-icons/si";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 import Technology from "./components/Technology";
 import GlobalState from "./components/GlobalState";
-import Shift_selection from "./components/Shift_selection";
+import ShiftSelection from "./components/ShiftSelection";
 import Semester from "./components/Semester";
 import ShowRoutine from "./components/ShowRoutine";
 import Footer from "./components/Footer";
 import logo from './images/logo.jpg'
 import Group from "./components/Group";
-import Home from "./components/Home";
-import RenderComponents from "./components/RenderComponents";
 
 let refreshColor = localStorage.getItem("color");
 let refreshBgColor = localStorage.getItem("bg");
@@ -53,18 +50,15 @@ function App() {
               <h1>Class Routine</h1>
             </div>
           </div>
-          <h4 className="warning">Refresh the page to select Technology.</h4>
+          <h4 className="warning">This is a single page website, You can't back to previous menu.<br /><br /> Refresh to select again.</h4><br />
           <button style={{background: "transparent", border: 'none', borderRadius: "4rem"}} onClick={()=> window.location.reload()}><GrRefresh className="r-icon" /></button>
         </div>
-        
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/technology" element={<RenderComponents />} />
-          </Routes>
-        </BrowserRouter>
 
-
+        {first ? <Technology /> : null}
+        {second ? <ShiftSelection /> : null}
+        {third ? <Semester /> : null}
+        {showGroup ? <Group />: null}
+        {fourth ? <ShowRoutine /> : null}
 
         <div className="icon-section">
           <h1 className="gradient__text">For any correction in routine knock me.</h1>

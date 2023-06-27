@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import GlobalState from "./GlobalState";
 
 const Group = () => {
-  const { setsecond, second, third, setthird, routinePath, setroutinePath,routineHead, setroutineHead, fourth, setfourth, setshowGroup, showGroup } = useContext(GlobalState);
+  const { routinePath, setroutinePath,routineHead, setroutineHead, fourth, setfourth, setshowGroup, showGroup } = useContext(GlobalState);
   const handleGroup = (e, shift) => {
     setfourth(!fourth)
     setshowGroup(!showGroup)

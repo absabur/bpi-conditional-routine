@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import GlobalState from './GlobalState'
-import Footer from './Footer'
 
 const Semester = () => {
 

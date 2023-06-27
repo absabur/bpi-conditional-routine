@@ -1,6 +1,19 @@
 import React, { useContext } from 'react';
 
-import {Cst_1_2, Cst_1_4, Cst_1_6, Cst_2_2, Cst_2_4, Cst_2_6,  Cmt_1_2, Cmt_1_4, Cmt_1_6, Cmt_2_2, Cmt_2_4, Cmt_2_6} from '../Routines/index';
+import Cst12 from "./Cst_1_2";
+import Cst14 from "./Cst_1_4";
+import Cst16 from "./Cst_1_6";
+import Cst22 from "./Cst_2_2";
+import Cst24 from "./Cst_2_4";
+import Cst26 from "./Cst_2_6";
+
+import Cmt12 from "./Cmt_1_2";
+import Cmt14 from "./Cmt_1_4";
+import Cmt16 from "./Cmt_1_6";
+import Cmt22 from "./Cmt_2_2";
+import Cmt24 from "./Cmt_2_4";
+import Cmt26 from "./Cmt_2_6";
+
 import GlobalState from '../components/GlobalState';
 import "./Styling/routine.css";
 
@@ -10,30 +23,30 @@ const RenderRoutine = () => {
     
 
     const renderRoutine = () => {
-        if (routinePath == "cst1st2nd") {
-          return <Cst_1_2 />
-        }else if (routinePath == "cst1st4th") {
-          return <Cst_1_4 />
-        }else if (routinePath == "cst1st6th") {
-          return <Cst_1_6 />
-        }else if (routinePath == "cst2nd2nd") {
-          return <Cst_2_2 />
-        }else if (routinePath == "cst2nd4th") {
-          return <Cst_2_4 />
-        }else if (routinePath == "cst2nd6th") {
-          return <Cst_2_6 />
-        }else if (routinePath == "cmt1st2nd") {
-          return <Cmt_1_2 />
-        }else if (routinePath == "cmt1st4th") {
-          return <Cmt_1_4 />
-        }else if (routinePath == "cmt1st6th") {
-          return <Cmt_1_6 />
-        }else if (routinePath == "cmt2nd2nd") {
-          return <Cmt_2_2 />
-        }else if (routinePath == "cmt2nd4th") {
-          return <Cmt_2_4 />
-        }else if (routinePath == "et2nd2ndc") {
-          return <Cmt_2_6 />
+        if (routinePath === "cst1st2nd") {
+          return <Cst12 />
+        }else if (routinePath === "cst1st4th") {
+          return <Cst14 />
+        }else if (routinePath === "cst1st6th") {
+          return <Cst16 />
+        }else if (routinePath === "cst2nd2nd") {
+          return <Cst22 />
+        }else if (routinePath === "cst2nd4th") {
+          return <Cst24 />
+        }else if (routinePath === "cst2nd6th") {
+          return <Cst26 />
+        }else if (routinePath === "cmt1st2nd") {
+          return <Cmt12 />
+        }else if (routinePath === "cmt1st4th") {
+          return <Cmt14 />
+        }else if (routinePath === "cmt1st6th") {
+          return <Cmt16 />
+        }else if (routinePath === "cmt2nd2nd") {
+          return <Cmt22 />
+        }else if (routinePath === "cmt2nd4th") {
+          return <Cmt24 />
+        }else if (routinePath === "et2nd2ndc") {
+          return <Cmt26 />
         }else{
           return (
             <div>

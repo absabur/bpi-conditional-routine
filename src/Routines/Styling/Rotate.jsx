@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import GlobalState from '../../components/GlobalState';
 
 const Rotate = () => {
-    const {rotate, setrotate} = useContext(GlobalState)
+    const { setrotate } = useContext(GlobalState)
 
   const portrait = (e) => {
-    if (e.target.textContent == "Potrait") {
+    if (e.target.textContent === "Potrait") {
       e.target.innerHTML = "Landscape";
       setrotate(() => {
         return { transform: "rotate(0deg) scale(1)" };

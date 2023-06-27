@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import GlobalState from "./GlobalState";
-import Footer from "./Footer";
 
 const Technology = () => {
   const { first, setfirst, second, setsecond, routinePath, setroutinePath, routineHead, setroutineHead, isGroup, setisGroup} =
@@ -12,7 +11,7 @@ const Technology = () => {
     setsecond(!second);
     setroutinePath(routinePath+sub)
     setroutineHead(routineHead+e+', ')
-    if (sub == "mt" || sub == "et") {
+    if (sub === "mt" || sub === "et") {
       setisGroup(!isGroup)
     }
   };
