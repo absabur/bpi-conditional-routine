@@ -142,16 +142,19 @@ html {
 .p:hover,.h:hover {
   box-shadow: 0 0 15px rgb(255, 0, 0);
 }
-.p p, .h p {
+.p p,
+.h p {
   height: 100%;
   width: 100%;
   font-size: 1.35vw;
   font-weight: 700;
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: auto;
 }
-.p2 p, .p3 p, .h p{
+.p2 p,
+.p3 p
+{
   font-size: 1.75vw;
   line-height: 2.2vw;
 }
@@ -199,7 +202,8 @@ html {
 }
 
 @media screen and (max-width: 1120px) {
-  .p p, .h p {
+  .p p,
+  .h p {
     font-weight: 600;
   }
 }
@@ -322,6 +326,17 @@ html {
   .row .h {
     min-height: 30px;
     max-height: 30px;
+  }
+    .p p{
+    font-size: 1.52vw;
+  }
+  .h p {
+    font-size: 2vw;
+  }
+  .p2 p,
+  .p3 p
+  {
+    font-size: 2.2vw;
   }
 }
 
