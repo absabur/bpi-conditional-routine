@@ -12,9 +12,9 @@
   background-color: rgb(0, 0, 0);
   color: white;
   padding: 1rem;
+  padding-bottom: 1rem;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 2rem;
 }
 .cap1 .image {
   width: 100%;
@@ -32,13 +32,17 @@ img {
 .head {
   text-align: center;
   font-size: 30px;
+  width: 100%;
   padding: 1rem;
-  box-shadow: 0 0 20px black;
   display: inline-block;
   margin: 0 auto;
-  border-radius: 10px;
   margin-bottom: 2rem;
-  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+  box-shadow: 10px 0 10px black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 /* .space {
   width: 100%;

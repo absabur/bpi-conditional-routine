@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { GrRefresh } from "react-icons/gr";
 import { SiGmail } from "react-icons/si";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 import Technology from "./components/Technology";
@@ -13,6 +14,8 @@ import ShowRoutine from "./components/ShowRoutine";
 import Footer from "./components/Footer";
 import logo from './images/logo.jpg'
 import Group from "./components/Group";
+import Home from "./components/Home";
+import RenderComponents from "./components/RenderComponents";
 
 let refreshColor = localStorage.getItem("color");
 let refreshBgColor = localStorage.getItem("bg");
@@ -54,12 +57,15 @@ function App() {
           <button style={{background: "transparent", border: 'none', borderRadius: "4rem"}} onClick={()=> window.location.reload()}><GrRefresh className="r-icon" /></button>
         </div>
         
-        
-        {first ? <Technology /> : null}
-        {second ? <Shift_selection /> : null}
-        {third ? <Semester /> : null}
-        {showGroup ? <Group />: null}
-        {fourth ? <ShowRoutine /> : null}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/technology" element={<RenderComponents />} />
+          </Routes>
+        </BrowserRouter>
+
+
+
         <div className="icon-section">
           <h1 className="gradient__text">For any correction in routine knock me.</h1>
           <div className="icon">
